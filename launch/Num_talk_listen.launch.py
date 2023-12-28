@@ -6,27 +6,27 @@ import launch_ros.actions
 
 def generate_launch_description():
 
-    talker = launch_ros.actions.Node(
+    talker_rand = launch_ros.actions.Node(
             package='mypkg',
             executable='talker_rand',
             )
 
-    listener1 = launch_ros.actions.Node(
+    listener_EvenNum = launch_ros.actions.Node(
             package='mypkg',
             executable='listener_EvenNum',
             output='screen'
             )
 
-    listener2 = launch_ros.actions.Node(
+    listener_PrimeNum = launch_ros.actions.Node(
             package='mypkg',
             executable='listener_PrimeNum',
             output='screen'
             )
 
-    listener3 = launch_ros.actions.Node(
+    listener_Divisors = launch_ros.actions.Node(
             package='mypkg',
             executable='listener_Divisors',
             output='screen'
             )
 
-    return launch.LaunchDescription([talker, listener])
+    return launch.LaunchDescription([talker_rand, listener_EvenNum, listener_PrimeNum, listener_Divisors])
