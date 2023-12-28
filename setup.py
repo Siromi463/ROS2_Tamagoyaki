@@ -24,6 +24,10 @@ setup(
         'console_scripts': [
             'talker = mypkg.talker:main',
             'listener = mypkg.listener:main',
+            'talker_rand = mypkg.talker_rand:main',
+            'listener_EvenNum = mypkg.listener_EvenNum:main',
+            'listener_PrimeNum = mypkg.listener_PrimeNum:main',
+            'listener_Divisors = mypkg.listener_Divisors:main',
 
         ],
     },
