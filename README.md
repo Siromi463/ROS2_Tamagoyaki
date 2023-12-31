@@ -1,7 +1,7 @@
 # robosys2023
-[![test](https://github.com/Siromi463/mypkg/actions/workflows/test.yml/badge.svg)](https://github.com/Siromi463/mypkg/blob/main/.github/workflows/test.yml)
+[![test](https://github.com/Siromi463/mypkg/actions/workflows/test.yml/badge.svg)](https://github.com/Siromi463/mypkg/actions/workflows/test.yml)
 
-[![test](https://github.com/Siromi463/mypkg/actions/workflows/test.yml/badge.svg)](https://github.com/Siromi463/mypkg/blob/main/.github/workflows/test_num.yml)
+[![test](https://github.com/Siromi463/mypkg/actions/workflows/test_num.yml/badge.svg)](https://github.com/Siromi463/mypkg/actions/workflows/test_num.yml)
 
 ## 概要
 
@@ -32,7 +32,20 @@ mypkg
 	* 約0.5秒刻みで1から順に整数を表示
 * 以下で実行
 ```
-$ ros2 run mypkg talk_listen.launch.py
+$ ros2 launch mypkg talk_listen.launch.py
+```
+####実行結果
+```
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [talker-1]: process started with pid [1268]
+[INFO] [listener-2]: process started with pid [1270]
+[listener-2] [INFO] [1704016992.502905041] [listener]: Listen: 0
+[listener-2] [INFO] [1704016992.984026432] [listener]: Listen: 1
+[listener-2] [INFO] [1704016993.482726319] [listener]: Listen: 2
+[listener-2] [INFO] [1704016993.983468875] [listener]: Listen: 3
+[listener-2] [INFO] [1704016994.482763648] [listener]: Listen: 4
+[listener-2] [INFO] [1704016994.982897496] [listener]: Listen: 5
+．．．
 ```
 
 ###num_talk_listen.launch.py
@@ -44,7 +57,22 @@ $ ros2 run mypkg talk_listen.launch.py
 	* listener_prime.py	:生成された整数が素数かどうか表示
 * 以下で実行
 ```
-$ ros2 run mypkg num_talk_listen.launch.py
+$ ros2 launch mypkg num_talk_listen.launch.py
+```
+####実行結果
+```
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [talker_rand-1]: process started with pid [1291]
+[INFO] [listener_rand-2]: process started with pid [1293]
+[INFO] [listener_even-3]: process started with pid [1295]
+[INFO] [listener_prime-4]: process started with pid [1297]
+[listener_prime-4] [INFO] [1704017027.392035125] [listener_prime]: not prime
+[listener_even-3] [INFO] [1704017027.437674385] [listener_even]: even
+[listener_rand-2] [INFO] [1704017027.437674396] [listener_rand]: received: 76
+[listener_prime-4] [INFO] [1704017030.366375485] [listener_prime]: not prime
+[listener_even-3] [INFO] [1704017030.366255028] [listener_even]: even
+[listener_rand-2] [INFO] [1704017030.366481629] [listener_rand]: received: 42
+．．．
 ```
 
 ## 必要なソフトウェア
