@@ -8,32 +8,18 @@
 * このパッケージは、ロボットシステム学の課題提出用のものです。
 * パッケージ内にはtalk_listen.launch.py、num_talk_listen.launch.pyというローンチファイルがあります。
 
-## インストール方法
-
-
-１．ターミナル内でリポジトリをクローンする。
-```
-$ git clone https://github.com/Siromi463/mypkg.git
-```
-
-２．インストールされているか確認。(mypkgが表示されていればOK)
-```
-$ ls
-mypkg
-```
-
-３．使ってみよう！
-
-## 使い方
+## ローンチファイルの使い方
 
 ### talk_listen.launch.py
 
 * talkerノードとlistenerノードを使用。
 	* 約0.5秒刻みで1から順に整数を表示
 * 以下で実行
+
 ```
 $ ros2 launch mypkg talk_listen.launch.py
 ```
+
 #### 実行結果
 ```
 [INFO] [launch]: Default logging verbosity is set to INFO
@@ -74,6 +60,15 @@ $ ros2 launch mypkg num_talk_listen.launch.py
 [listener_rand-2] [INFO] [1704017030.366481629] [listener_rand]: received: 42
 ．．．
 ```
+
+## ノードを個別で立ち上げる場合
+* 例：端末１でtalker端末2でlistenerを立ち上げる。
+```
+端末1 $ ros2 run talker.py
+端末2 $ ros2 run listener.py
+```
+* 各ノードを各端末で立ち上げよう！
+
 
 ## 必要なソフトウェア
 * Python
