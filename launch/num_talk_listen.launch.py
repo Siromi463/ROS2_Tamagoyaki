@@ -25,5 +25,10 @@ def generate_launch_description():
             executable='listener_divisors',
             output='screen'
             )
+    answer = launch_ros.actions.Node(
+            package='mypkg',
+            executable='answer',
+            output='screen'
+            )
 
-    return launch.LaunchDescription([talker_rand, listener_even, listener_prime, listener_divisors])
+    return launch.LaunchDescription([talker_rand, listener_even, listener_prime, listener_divisors, answer])

@@ -14,7 +14,7 @@ def divisors(n):
 def cb(msg):
     global node
     divs = divisors(msg.data)
-    node.get_logger().info("Listen: divisors of %d are %s" % (msg.data, divs))
+    node.get_logger().info("divisors are %s" % divs)
 
 rclpy.init()
 node = Node("listener_divisors")
