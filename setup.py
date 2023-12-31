@@ -28,7 +28,6 @@ setup(
             'talker_rand = mypkg.talker_rand:main',
             'listener_even = mypkg.listener_even:main',
             'listener_prime = mypkg.listener_prime:main',
-            'listener_divisors = mypkg.listener_divisors:main',
             'listener_rand = mypkg.listener_rand:main',
         ],
     },
