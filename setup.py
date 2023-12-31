@@ -25,6 +25,11 @@ setup(
             'talker = mypkg.talker:main',
             'listener = mypkg.listener:main',
 
+            'talker_rand = mypkg.talker_rand:main',
+            'listener_even = mypkg.listener_even:main',
+            'listener_prime = mypkg.listener_prime:main',
+            'listener_divisors = mypkg.listener_divisors:main',
+
         ],
     },
 )
