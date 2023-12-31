@@ -26,7 +26,7 @@ mypkg
 
 ## 使い方
 
-###talk_listen.launch.py
+### talk_listen.launch.py
 
 * talkerノードとlistenerノードを使用。
 	* 約0.5秒刻みで1から順に整数を表示
@@ -34,7 +34,7 @@ mypkg
 ```
 $ ros2 launch mypkg talk_listen.launch.py
 ```
-####実行結果
+#### 実行結果
 ```
 [INFO] [launch]: Default logging verbosity is set to INFO
 [INFO] [talker-1]: process started with pid [1268]
@@ -48,7 +48,7 @@ $ ros2 launch mypkg talk_listen.launch.py
 ．．．
 ```
 
-###num_talk_listen.launch.py
+### num_talk_listen.launch.py
 
 * 使用ノードは以下
 	* talker_rand.py	:0~100のランダムな整数を生成
@@ -59,7 +59,7 @@ $ ros2 launch mypkg talk_listen.launch.py
 ```
 $ ros2 launch mypkg num_talk_listen.launch.py
 ```
-####実行結果
+#### 実行結果
 ```
 [INFO] [launch]: Default logging verbosity is set to INFO
 [INFO] [talker_rand-1]: process started with pid [1291]
