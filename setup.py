@@ -29,8 +29,6 @@ setup(
             'listener_even = mypkg.listener_even:main',
             'listener_prime = mypkg.listener_prime:main',
             'listener_divisors = mypkg.listener_divisors:main',
-            'answer = mypkg.answer;main',
-
         ],
     },
 )
