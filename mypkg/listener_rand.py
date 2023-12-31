@@ -4,7 +4,7 @@ from std_msgs.msg import Int16
 
 def cb(msg):
     global node
-    node.get_logger().info("\nreceived: %d" % msg.data)
+    node.get_logger().info("received: %d" % msg.data)
 
 rclpy.init()
 node = Node("listener_rand")

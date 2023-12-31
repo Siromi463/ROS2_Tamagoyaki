@@ -5,9 +5,9 @@ from std_msgs.msg import Int16
 def cb(msg):
     global node
     if msg.data % 2 == 0:
-        node.get_logger().info("\neven")
+        node.get_logger().info("even")
     else:
-        node.get_logger().info("\nodd")
+        node.get_logger().info("odd")
 
 rclpy.init()
 node = Node("listener_even")

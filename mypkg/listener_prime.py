@@ -19,9 +19,9 @@ def is_prime(n):
 def cb(msg):
     global node
     if is_prime(msg.data):
-        node.get_logger().info("\nprime")
+        node.get_logger().info("prime")
     else:
-        node.get_logger().info("\nnot prime")
+        node.get_logger().info("not prime")
 
 rclpy.init()
 node = Node("listener_prime")
