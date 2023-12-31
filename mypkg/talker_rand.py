@@ -1,0 +1,19 @@
+import rclpy
+from rclpy.node import Node
+from std_msgs.msg import Int16
+import random
+
+rclpy.init()
+node = Node("talker_rand")
+pub = node.create_publisher(Int16, "countup", 10)
+
+def cb():
+    msg = Int16()
+    msg.data = random.randint(0, 100)
+    pub.publish(msg)
+
+node.create_timer(3.0, cb)
+try:
+    rclpy.spin(node)
+except KeyboardInterrupt:
+    pass
