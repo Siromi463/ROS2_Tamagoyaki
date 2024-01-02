@@ -12,13 +12,13 @@ n = 0
 
 def cb():
     global n
-    msg = Int16()
-    msg.data = n
-    pub.publish(msg)
-    n += 1
+    if n <= 20:
+        msg = Int16()
+        msg.data = n
+        pub.publish(msg)
+        n += 1
+    else:
+        rclpy.shutdown()
 
 node.create_timer(0.5, cb)
-try:
-    rclpy.spin(node)
-except KeyboardInterrupt:
-    pass
+rclpy.spin(node)

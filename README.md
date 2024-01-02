@@ -6,8 +6,15 @@
 ## 概要
 
 * このパッケージは、ロボットシステム学の課題提出用のものです。
-* パッケージ内にはtalk_listen.launch.py、num_talk_listen.launch.pyというローンチファイルがあります。
+* パッケージ内には、以下のようなノードがあります。
+	* talker.py
+	* talker_rand.py
+	* listener.py
+	* listener_rand.py
+	* listener_even.py
+	* listener_prime.py
 * パッケージ内の各talkerノードは、countupトピックを通じてデータを送信しています。
+* パッケージ内にはtalk_listen.launch.py、num_talk_listen.launch.pyと>いうローンチファイルがあります。
 
 ## ローンチファイルの使い方
 
@@ -80,8 +87,6 @@ $ ros2 launch mypkg num_talk_listen.launch.py
 
 ## ライセンス
 * このソフトウェアパッケージは，3条項BSDライセンスの下，再頒布および使用が許可されます。
-	* © 2023 Siromi463
-
-* このソフトウェアパッケージ内の一部コードは、以下のリンクから、著者の許諾を得て改変しています。
+* このソフトウェアパッケージ内の一部コードは、以下のリンクから、著者>の許諾を得て改変しています。
 	* [ryuichiueda/my_slides/robosys_2022](https://github.com/ryuichiueda/my_slides/tree/master/robosys_2022)
-	* © 2022 Ryuichi Ueda
+	* © 2023 Siromi463
