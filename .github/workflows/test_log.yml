@@ -1,4 +1,4 @@
-name: test_num
+name: test_log
 on: push
 jobs:
   test:
@@ -12,4 +12,4 @@ jobs:
           cd /root/ros2_ws
           rosdep update
           rosdep install -i --from-path src --rosdistro humble -y
-          bash -xv ./src/mypkg/test/test.bash /root
+          bash -xv ./src/mypkg/test/test_log.bash /root
