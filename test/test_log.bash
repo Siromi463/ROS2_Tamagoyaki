@@ -17,7 +17,7 @@ grep 'Successfully wrote '10' to the file'
 log_file_path="$dir/ros2_ws/src/mypkg/log.txt"
 
 content=$(cat $log_file_path)
-expected_content=$(seq -s '\n' 1 20)
+expected_content=$(seq 1 20 | paste -sd '\n' -)
 
 if [ "$content" == "$expected_content" ]; then
     echo "Test passed"
