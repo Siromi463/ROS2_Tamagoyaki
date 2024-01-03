@@ -12,3 +12,17 @@ timeout 20 ros2 launch mypkg log_talk_listen.launch.py > /tmp/mypkg.log
 
 cat /tmp/mypkg.log |
 grep 'Successfully wrote '10' to the file'
+
+
+log_file_path="$dir/ros2_ws/src/mypkg/log.txt"
+
+content=$(cat $log_file_path)
+expected_content=$(seq -s '\n' 1 20)
+
+if [ "$content" == "$expected_content" ]; then
+    echo "Test passed"
+    exit 0
+else
+    echo "Test failed"
+    exit 1
+fi
