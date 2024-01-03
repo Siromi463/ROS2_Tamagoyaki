@@ -8,7 +8,7 @@ import random
 
 rclpy.init()
 node = Node("talker_rand")
-pub = node.create_publisher(Int16, "countup", 10)
+pub = node.create_publisher(Int16, "chatter", 10)
 
 def cb():
     msg = Int16()

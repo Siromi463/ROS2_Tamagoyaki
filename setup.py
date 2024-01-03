@@ -26,11 +26,10 @@ setup(
             'listener = mypkg.listener:main',
 
             'talker_rand = mypkg.talker_rand:main',
-            'listener_even = mypkg.listener_even:main',
-            'listener_prime = mypkg.listener_prime:main',
-            'listener_rand = mypkg.listener_rand:main',
             'talker_data = mypkg.talker_data:talker_data',
             'listener_log = mypkg.listener_log:main',
+            'converter_tobinery = mypkg.converter_tobinery:main',
+            'converter_tohex = mypkg.converter_tohex:main',
         ],
     },
 )
