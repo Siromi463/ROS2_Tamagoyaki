@@ -8,17 +8,14 @@ from std_msgs.msg import Int16
 rclpy.init()
 node = Node("talker")
 pub = node.create_publisher(Int16, "countup", 10)
-n = 0
+n = 1
 
 def cb():
     global n
-    if n <= 20:
-        msg = Int16()
-        msg.data = n
-        pub.publish(msg)
-        n += 1
-    else:
-        rclpy.shutdown()
+    msg = Int16()
+    msg.data = n
+    pub.publish(msg)
+    n += n
 
 node.create_timer(0.5, cb)
 rclpy.spin(node)
