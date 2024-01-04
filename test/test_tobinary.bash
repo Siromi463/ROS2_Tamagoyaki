@@ -11,4 +11,4 @@ source $dir/.bashrc
 timeout 20 ros2 launch mypkg tobinary.launch.py > /tmp/mypkg.log
 
 cat /tmp/mypkg.log |
-grep 'Listen: Received value: 7, Binary: 0000000000000111'
+grep 'Received value: 7, Binary: 0000000000000111'
