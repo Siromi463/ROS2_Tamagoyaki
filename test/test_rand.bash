@@ -8,7 +8,7 @@ dir=~
 cd $dir/ros2_ws
 colcon build
 source $dir/.bashrc
-timeout 10 ros2 launch mypkg talk_listen.launch.py > /tmp/mypkg.log
+timeout 10 ros2 launch mypkg rand_talk_listen.launch.py > /tmp/mypkg.log
 
 cat /tmp/mypkg.log |
 grep -E 'Listen: (0|[1-9][0-9]?|100)'
