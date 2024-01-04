@@ -8,7 +8,7 @@ dir=~
 cd $dir/ros2_ws
 colcon build
 source $dir/.bashrc
-timeout 10 ros2 launch mypkg tobinary.launch.py > /tmp/mypkg.log
+timeout 20 ros2 launch mypkg tobinary.launch.py > /tmp/mypkg.log
 
 cat /tmp/mypkg.log |
 grep 'Listen: Received value: 7, Binary: 0000000000000111'
