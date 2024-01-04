@@ -28,7 +28,7 @@ setup(
             'talker_rand = mypkg.talker_rand:main',
             'talker_data = mypkg.talker_data:talker_data',
             'listener_log = mypkg.listener_log:main',
-            'converter_tobinery = mypkg.converter_tobinery:main',
+            'converter_tobinary = mypkg.converter_tobinary:main',
             'converter_tohex = mypkg.converter_tohex:main',
         ],
     },

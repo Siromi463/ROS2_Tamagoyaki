@@ -9,9 +9,9 @@ import launch_ros.actions
 
 def generate_launch_description():
 
-    talker_data = launch_ros.actions.Node(
+    talker = launch_ros.actions.Node(
             package='mypkg',
-            executable='talker_data',
+            executable='talker',
             )
     converter_tobinary = launch_ros.actions.Node(
             package='mypkg',
@@ -19,4 +19,4 @@ def generate_launch_description():
             output='screen'
             )
 
-    return launch.LaunchDescription([talker_data, converter_tobinary])
+    return launch.LaunchDescription([talker, converter_tobinary])
