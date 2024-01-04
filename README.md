@@ -1,7 +1,13 @@
 # mypkg
 [![test](https://github.com/Siromi463/mypkg/actions/workflows/test.yml/badge.svg)](https://github.com/Siromi463/mypkg/actions/workflows/test.yml)
 
-[![test](https://github.com/Siromi463/mypkg/actions/workflows/test_num.yml/badge.svg)](https://github.com/Siromi463/mypkg/actions/workflows/test_num.yml)
+[![test_log](https://github.com/Siromi463/mypkg/actions/workflows/test_log.yml/badge.svg)](https://github.com/Siromi463/mypkg/actions/workflows/test_log.yml)
+
+[![test_rand](https://github.com/Siromi463/mypkg/actions/workflows/test_rand.yml/badge.svg)](https://github.com/Siromi463/mypkg/actions/workflows/test_rand.yml)
+
+[![test_tobinary](https://github.com/Siromi463/mypkg/actions/workflows/test_tobinary.yml/badge.svg)](https://github.com/Siromi463/mypkg/actions/workflows/test_tobinary.yml)
+
+[![test_tohex](https://github.com/Siromi463/mypkg/actions/workflows/test_tohex.yml/badge.svg)](https://github.com/Siromi463/mypkg/actions/workflows/test_tohex.yml)
 
 ## 概要
 
