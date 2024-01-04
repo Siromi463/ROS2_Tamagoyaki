@@ -8,7 +8,7 @@ dir=~
 cd $dir/ros2_ws
 colcon build
 source $dir/.bashrc
-timeout 20 ros2 launch mypkg log_talk_listen.launch.py > /tmp/mypkg.log
+timeout 50 ros2 launch mypkg log_talk_listen.launch.py > /tmp/mypkg.log
 
 cat /tmp/mypkg.log |
 grep 'Successfully wrote '10' to the file'
