@@ -10,8 +10,6 @@ colcon build
 source $dir/.bashrc
 timeout 30 ros2 launch mypkg log_talk_listen.launch.py > /tmp/mypkg.log
 
-sleep 35
-
 cat /tmp/mypkg.log |
 grep 'Successfully wrote '10' to the file'
 

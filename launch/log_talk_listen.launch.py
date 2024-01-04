@@ -13,6 +13,7 @@ def generate_launch_description():
             package='mypkg',
             executable='talker_data',
             )
+
     listener_log = launch_ros.actions.Node(
             package='mypkg',
             executable='listener_log',

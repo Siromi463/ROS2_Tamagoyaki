@@ -13,6 +13,7 @@ def main(args=None):
         'chatter',
         listener_callback,
         10)
+
     rclpy.spin(node)
     node.destroy_node()
     rclpy.shutdown()

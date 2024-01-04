@@ -13,6 +13,7 @@ def generate_launch_description():
             package='mypkg',
             executable='talker',
             )
+
     converter_tobinary = launch_ros.actions.Node(
             package='mypkg',
             executable='converter_tobinary',

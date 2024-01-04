@@ -28,6 +28,7 @@ def main():
     rclpy.init()
     node = Node('listener_log')
     subscription = node.create_subscription(Int16, 'chatter', log_message, 10)
+    
     timer = threading.Timer(10.0, rclpy.shutdown)  # 10秒間メッセージを受信しなかった場合にノードを終了
     timer.start()  # タイマーを開始
     rclpy.spin(node)

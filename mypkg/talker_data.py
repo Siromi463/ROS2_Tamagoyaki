@@ -15,6 +15,7 @@ def talker_data():
         publisher.publish(msg)
         node.get_logger().info('Publishing: "%d"' % msg.data)
         i += 1
+
         if i > 20:
             rclpy.shutdown()
 

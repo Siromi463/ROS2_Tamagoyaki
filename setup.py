@@ -24,7 +24,6 @@ setup(
         'console_scripts': [
             'talker = mypkg.talker:main',
             'listener = mypkg.listener:main',
-
             'talker_rand = mypkg.talker_rand:main',
             'talker_data = mypkg.talker_data:talker_data',
             'listener_log = mypkg.listener_log:main',
