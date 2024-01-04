@@ -2,8 +2,8 @@ import rclpy
 from std_msgs.msg import Int16
 
 def listener_callback(msg):
-    hex = format(msg.data, '04x')
-    print('Received value: %d, Hex: %s' % (msg.data, Hex))
+    Hex = format(msg.data, '04x')
+    print('Received value: %d, Hex: %s' % (msg.data, Hex), flush=True)
 
 def main(args=None):
     rclpy.init(args=args)
@@ -14,6 +14,8 @@ def main(args=None):
         listener_callback,
         10)
     rclpy.spin(node)
+    node.destroy_node()
+    rclpy.shutdown()
 
 if __name__ == '__main__':
     main()
