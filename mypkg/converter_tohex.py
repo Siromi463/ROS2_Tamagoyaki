@@ -1,3 +1,6 @@
+# SPDX-FileCopyrightText: 2023 Siromi463 kimimi.nyan@gmail.com
+# SPDX-License-Identifier: BSD-3-Clause
+
 import rclpy
 from std_msgs.msg import Int16
 

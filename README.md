@@ -13,30 +13,30 @@
 
 * このパッケージは、ロボットシステム学の課題提出用のものです。
 * このリポジトリは、ROS2のパッケージです。
+* パッケージ内のノードを使用し、数値変換や解析に役立てることができます。
 
 ## トピックについて
 
-* このパッケージでは、chatterというトピックを使ってInt16型整数をパブリッシュ及びサブスクライブしています。
+* パッケージ内には、chatterという名前のトピックを使用してInt16型整数をパブリッシュ及びサブスクライブするのノードが含まれています。
 
 ## ノード
 
 * このパッケージには、以下のノードがあります。
-	* talker.py
-	* talker_rand.py
-	* talker_data.py
-	* listener.py
-	* listener_log.py
-	* converter_tobinary.py
-	* converter_tohex.py
+	* talker
+	* talker_rand
+	* talker_data
+	* listener
+	* listener_log
+	* converter_tobinary
+	* converter_tohex
 * talker系統は、トピックを通じてデータをパブリッシュします。
 * listenerやconverter系統は、パブリッシュされたデータをサブスクライブして、対応した動作を行います。
 * 各ノードは、各端末で以下のようにしてターミナルで実行します。(node_name)は対応したノード名へ。
 ```
 ros2 run mypkg (node_name)
 ```
-* また、.pyは省略してください。
 
-### talker.py
+### talker
 
 * このノードは、約0.5秒刻みで0から順に整数をパブリッシュします。
 * このノードは、chatterトピックを通じて、Int16型の整数をパブリッシュします。
@@ -55,7 +55,7 @@ ros2 run mypkg (node_name)
 [INFO] [1704344804.890343784] [listener]: Listen: 5
 ・・・
 ```
-### talker_data.py
+### talker_data
 
 * このノードは、約0.5秒刻みで0から20まで順に整数をパブリッシュします。
 * このノードは、chatterトピックを通じて、Int16型の整数をパブリッシュします。
@@ -76,7 +76,7 @@ ros2 run mypkg (node_name)
 ```
 * このノードは、パブリッシュを一定の範囲までに限定したいときに使っています。
 
-### talker_rand.py
+### talker_rand
 
 * このノードは、約3秒刻みで0~100の範囲のランダムな整数をパブリッシュします。
 * このノードは、chatterトピックを通じて、Int16型の整数をパブリッシュします。
@@ -97,14 +97,14 @@ ros2 run mypkg (node_name)
 ```
 * このノードは、ランダムなデータに対して、何か動作を行いたいときに使えます。
 
-### listener.py
+### listener
 
 * このノードは、サブスクライブした整数を表示します。
 * このノードは、chatterトピックを通じて、Int16型の整数をサブスクライブします。
 * 実行結果はtalkerの説明でも触れたため省略します。
 * talker系統からパブリッシュされたデータをそのまま見たい時に使っています。
 
-### listener_log.py
+### listener_log
 
 * このノードは、サブスクライブした整数を、log.txtというファイルに一時的に保存します。
 * このノードは、chatterトピックを通じて、Int16型の整数をサブスクライブします。
@@ -112,7 +112,7 @@ ros2 run mypkg (node_name)
 * log.txtは、一つ目のmypkgディレクトリにあります。
 
 #### 実行結果
-* talker_data.pyからデータをサブスクライブして使ってみます。
+* talker_dataからデータをサブスクライブして使ってみます。
 ```
 端末1 ros2 run mypkg talker_data
 - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -143,12 +143,12 @@ $ cat log.txt
 ```
 * このノードは、センサデータなどを一時保存して、分析したい時などに使えます。
 
-### converter_tobinary.py
+### converter_tobinary
 
 * このノードは、サブスクライブした整数を、2進数に変換し表示します。
 * このノードは、chatterトピックを通じて、Int16型の整数をサブスクライブします。
 #### 実行結果
-* talker.pyからデータをサブスクライブして使ってみます。
+* talkerからデータをサブスクライブして使ってみます。
 ```
 端末1 ros2 run mypkg talker
 - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -164,12 +164,12 @@ Received value: 6, Binary: 0000000000000110
 ```
 * このノードは、2進数でのデータを必要とする場合に使えます。
 
-### converter_tohex.py
+### converter_tohex
 
 * このノードは、サブスクライブした整数を、16進数に変換し表示します。
 * このノードは、chatterトピックを通じて、Int16型の整数をサブスクライブします。
 #### 実行結果
-* talker_rand.pyからデータをサブスクライブして使ってみます。
+* talker_randからデータをサブスクライブして使ってみます。
 ```
 端末1 ros2 run mypkg talker_rand
 - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -183,7 +183,7 @@ Received value: 77, Hex: 004d
 * このノードは、16進数でのデータを必要とする場合に使えます。
 
 ## ローンチファイル
-* パッケージ内のローンチファイルを利用すると、複数端末を使わずに、talkerやliatenerを同時に起動することができます。
+* パッケージ内のローンチファイルを利用すると、複数端末を使わずに、talkerやliatener等を同時に起動することができます。
 * パッケージ内には、以下のようなローンチファイルがあります。
 	* talk_listen.launch.py
 	* rand_talk_listen.launch.py
@@ -196,7 +196,7 @@ $ ros2 launch (launch name).launch.py
 ```
 
 ### talk_listen.launch.py
-* talker.pyとlistener.pyを同時に起動します。
+* talkerとlistenerを同時に起動します。
 
 #### 実行結果
 ```
@@ -213,7 +213,7 @@ $ ros2 launch mypkg talk_listen.launch.py
 ```
 
 ### rand_talk_listen.launch.py
-* talker_rand.pyとlistener.pyを同時に起動します。
+* talker_randとlistenerを同時に起動します。
 
 #### 実行結果
 ```
@@ -229,7 +229,7 @@ $ ros2 launch mypkg rand_talk_listen.launch.py
 ```
 
 ### log_listen.launch.py
-* talker_data.pyとlistener_log.pyを同時に起動します。
+* talker_dataとlistener_logを同時に起動します。
 
 #### 実行結果
 ```
@@ -243,10 +243,10 @@ $ ros2 launch mypkg log_talk_listen.launch.py
 [talker_data-1] [INFO] [1704349965.200708171] [talker_data]: Publishing: "4"
 [talker_data-1] [INFO] [1704349965.700977149] [talker_data]: Publishing: "5"
 ```
-* また、listener_log.pyの説明の時と同様、log.txtにデータが保存されます。
+* また、listener_logの説明の時と同様、log.txtにデータが保存されます。
 
 ### tobinary.launch.py
-* talker.pyとconverter_tobinary.pyを同時に起動します。
+* talkerとconverter_tobinaryを同時に起動します。
 
 #### 実行結果
 ```
@@ -263,7 +263,7 @@ $ ros2 launch mypkg tobinary.launch.py
 ```
 
 ### tohex.launch.py
-* talker.pyとconverter_tohex.pyを同時に起動します。
+* talkerとconverter_tohexを同時に起動します。
 
 #### 実行結果
 ```
@@ -290,6 +290,6 @@ $ ros2 launch mypkg tohex.launch.py
 
 ## ライセンス
 * このソフトウェアパッケージは，3条項BSDライセンスの下，再頒布および使用が許可されます。
-* このソフトウェアパッケージ内の一部コードは、以下のリンクから、著者>の許諾を得て改変しています。
+* このソフトウェアパッケージ内の一部コードは、以下のリンクから、著者の許諾を得て改変しています。
 	* [ryuichiueda/my_slides/robosys_2022](https://github.com/ryuichiueda/my_slides/tree/master/robosys_2022)
 	* © 2023 Siromi463
